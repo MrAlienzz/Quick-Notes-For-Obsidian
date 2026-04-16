@@ -1,0 +1,11 @@
+{
+	"id": "Quick-Notes",
+	"name": "Quick-Notes",
+	"version": "1.0.0",
+	"minAppVersion": "0.15.0",
+	"description": "A floating draggable note panel for capturing Quick notes. Press a hotkey, type your note, hit Enter. Notes are saved to a daily file in your vault.",
+	"author": "MrAlienzz",
+	"authorUrl": "https://github.com/MrAlienzz",
+	"fundingUrl": "",
+	"isDesktopOnly": false
+}

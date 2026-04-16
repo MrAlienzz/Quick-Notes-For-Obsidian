@@ -1,0 +1,96 @@
+.qmn-panel {
+	background: #181825;
+	border-radius: 12px;
+	box-shadow: 0 8px 32px rgba(0, 0, 0, 0.55);
+	font-family: "Segoe UI", system-ui, sans-serif;
+	overflow: hidden;
+}
+
+.qmn-titlebar {
+	background: #1e1e2e;
+	padding: 10px 12px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	cursor: grab;
+	user-select: none;
+}
+
+.qmn-titlebar:active {
+	cursor: grabbing;
+}
+
+.qmn-title {
+	color: #cdd6f4;
+	font-weight: bold;
+	font-size: 14px;
+	outline: none;
+	border-bottom: 1px dashed transparent;
+	min-width: 10px;
+}
+
+.qmn-title:focus {
+	border-bottom: 1px dashed #89b4fa;
+}
+
+.qmn-close {
+	color: #f38ba8;
+	font-size: 20px;
+	background: none;
+	border: none;
+	cursor: pointer;
+	padding: 0 4px;
+	line-height: 1;
+	transition: color 0.2s ease;
+}
+
+.qmn-close:hover {
+	color: #ff5555;
+}
+
+.qmn-panel-body {
+	padding: 10px 12px 8px 12px;
+}
+
+.qmn-textarea {
+	width: 100%;
+	background: #313244;
+	color: #cdd6f4;
+	border: none;
+	border-radius: 8px;
+	padding: 10px;
+	font-size: 14px;
+	font-family: "Segoe UI", system-ui, sans-serif;
+	min-height: 90px;
+	resize: vertical;
+	box-sizing: border-box;
+	outline: none;
+	display: block;
+	margin-bottom: 6px;
+	line-height: 1.5;
+}
+
+.qmn-textarea:focus {
+	outline: 2px solid #89b4fa;
+}
+
+.qmn-textarea::placeholder {
+	color: #6c7086;
+}
+
+.qmn-status {
+	color: #a6e3a1;
+	font-size: 12px;
+	opacity: 0;
+	transition: opacity 0.4s ease;
+	text-align: right;
+	padding-bottom: 4px;
+	height: 16px;
+}
+
+.qmn-settings-note {
+	color: var(--text-muted);
+	font-size: 12px;
+	margin-top: 10px;
+	line-height: 1.5;
+}
