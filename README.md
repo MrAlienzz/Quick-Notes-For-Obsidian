@@ -6,8 +6,7 @@ Press a hotkey → a floating panel appears → type your note → hit Enter. Th
 
 ---
 
-<!-- Replace this line with your screenshot -->
-<!-- ![Quick Meeting Notes Panel](screenshot.png) -->
+![Screenshot](Screenshot.png)
 
 ---
 
@@ -21,23 +20,19 @@ Press a hotkey → a floating panel appears → type your note → hit Enter. Th
 - **Never Loses Data** — Notes are always appended, nothing is ever overwritten or deleted
 - **Multi-line Support** — Use `Shift + Enter` to write longer notes before saving
 - **Save Confirmation** — A subtle `✓ Saved` message confirms each note was written
-- **Global Hotkey Support** — Works even while Zoom is in focus via AutoHotkey (see below)
-
----
-
-## 🖥️ Requirements
-
-- [Obsidian](https://obsidian.md) (version 1.0.0 or higher)
-- Windows PC
-- [Node.js](https://nodejs.org) — only needed if you are building from source
 
 ---
 
 ## 📦 Installation
 
-### Option 1 — Manual Install (Recommended)
+### Option 1 — From Community Store (Recommended)
+1. Open Obsidian → **Settings → Community Plugins**
+2. If prompted, click **Turn on Community Plugins**
+3. Search for `quick-notes` and Just Download from there (If Available or use Option 2)
 
-1. Download the latest release from the [Releases](../../releases) page
+### Option 2 — Manual Install
+
+1. Download the latest release from the Releases page
 2. Download these 3 files from the release assets:
    - `main.js`
    - `manifest.json`
@@ -45,7 +40,7 @@ Press a hotkey → a floating panel appears → type your note → hit Enter. Th
 3. Open File Explorer and navigate to your Obsidian vault folder
 4. Enable hidden folders: **View → Show → Hidden Items**
 5. Navigate to `.obsidian → plugins`
-6. Create a new folder called `quick-meeting-notes`
+6. Create a new folder called `quick-notes`
 7. Copy the 3 downloaded files into that folder
 8. Open Obsidian → **Settings → Community Plugins**
 9. If prompted, click **Turn on Community Plugins**
@@ -62,38 +57,9 @@ Press a hotkey → a floating panel appears → type your note → hit Enter. Th
 
 ---
 
-## 🌐 Global Hotkey — Works While Zoom is Open
-
-By default, the hotkey only works when Obsidian is the focused window. To make it work system-wide (while Zoom or any other app is open), use **AutoHotkey**.
-
-### Step 1 — Install AutoHotkey
-Download and install it from [autohotkey.com](https://www.autohotkey.com)
-
-### Step 2 — Create the Script
-Create a new text file on your Desktop called `MeetingNotes.ahk` and paste this inside:
-
-```ahk
-#Persistent
-^+m::
-  Run, obsidian://open
-  Sleep, 300
-  Send, ^+m
-return
-```
-
-> This uses `Ctrl + Shift + M`. Change `^+m` to any combo you prefer.
-
-### Step 3 — Run the Script
-Double-click `MeetingNotes.ahk` — a green **H** icon appears in your taskbar. The global hotkey is now active.
-
-### Step 4 — Auto-start With Windows *(Optional)*
-1. Press `Win + R`, type `shell:startup`, press Enter
-2. Copy your `MeetingNotes.ahk` file into that folder
-3. It will now run automatically every time Windows starts
-
 ---
 
-## 🚀 How to Use
+##  How to Use
 
 | Action | What Happens |
 |--------|-------------|
@@ -168,7 +134,7 @@ Then copy `main.js`, `manifest.json`, and `styles.css` into your vault's plugin 
 
 ## 📋 Changelog
 
-### v1.2.0
+### v1.0.0
 - Replaced Modal with custom floating draggable panel
 - Added editable bold title with today's date as default
 - Added position memory across sessions
